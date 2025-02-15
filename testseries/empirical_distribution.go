@@ -6,6 +6,12 @@ package testseries
 func EmpiricalDistribution(relativeFreqs []float64) []float64 {
 	emp := make([]float64, len(relativeFreqs))
 	// TODO
+	sum := 0.0
+	for i, f := range relativeFreqs {
+		sum += f
+		emp[i] = sum
+	}
+
 	return emp
 }
 
